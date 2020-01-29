@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="/css/w3.css">
         <link rel="stylesheet" href="/img/">
         <link rel="stylesheet" href="js/actions.js">
+        <link rel="stylesheet" href="/Videos/">
+        <link rel="stylesheet" href="/bulma-0.8.0/">
     </head>
     <body>
         
@@ -28,7 +30,7 @@
                     <a href="#search" class="w3-bar-item w3-button">Search</a>
                     <a href="#post" class="w3-bar-item w3-button">Post</a>
                     <a href="#recommended" class="w3-bar-item w3-button">Recommended</a>
-                    <a href="#profile" class="w3-bar-item w3-button">Profile</a>
+                    <a href="http://127.0.0.1:59876/login%20page.html" class="w3-bar-item w3-button">Profile</a>
                 </div>
                 <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -45,7 +47,7 @@
             <a href="#search" onclick="w3_close()" class="w3-bar-item w3-button">Search</a>
             <a href="#post" onclick="w3_close()" class="w3-bar-item w3-button">Post</a>
             <a href="#recommended" onclick="w3_close()" class="w3-bar-item w3-button">Recommended</a>
-            <a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
+            <a href="http://127.0.0.1:59876/login%20page.html" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
         </nav>
 
         <!-- Header with full-height image -->
@@ -94,7 +96,7 @@
             <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
                 <div class="w3-col l3 m6 w3-margin-bottom">
                     <div class="w3-card">
-                        <img src="/4-html-hsu/img/news-AI-podcast-625.jpg" alt="John" style="width:100%">
+                        <iframe width="320" height="240" src="https://www.youtube.com/embed/6gRNgsTv45Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="w3-container">
                             <h3>Placeholder</h3>
                             <p>Description text</p>
@@ -120,7 +122,7 @@
                 </div>
                 <div class="w3-col l3 m6 w3-margin-bottom">
                     <div class="w3-card">
-                        <img src="/4-html-hsu/img/agrobot.jpg" alt="Jane" style="width:100%">
+                        <iframe width="320" height="240" src="https://www.youtube.com/embed/RdUQ_E-zsIg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="w3-container">
                             <h3>Placeholder</h3>
                             <p>Description text</p>
@@ -148,7 +150,7 @@
                     <div class="w3-card">
                         <img src="/4-html-hsu/img/nvidia-cars.jpg" alt="Mike" style="width:100%">
                         <div class="w3-container">
-                            <h3>Paceholder</h3>
+                            <h3>Placeholder</h3>
                             <p>Description text</p>
                             <button onclick="myFunction('Demo3')" class="3-button w3-light-grey w3-block">
                                 Open for more info</button>
@@ -172,16 +174,6 @@
                 </div>
                 <div class="w3-col l3 m6 w3-margin-bottom">
                     <div class="w3-card">
-                        <img src="/4-html-hsu/img/sat-ai-head-640x353.jpg" alt="Dan" style="width:100%">
-                        <div class="w3-container">
-                            <h3>Placeholder</h3>
-                            <p>Description text</p>
-                            <button onclick="myFunction('Demo4')" class="3-button w3-light-grey w3-block">
-                                Open for more info</button>
-
-                            <div id="Demo4" class="w3-container w3-hide">
-                                <p>Moar description text</p>
-                            </div>
 
                             <script>
                                 function myFunction(id) {
@@ -220,6 +212,11 @@
                 setTimeout(showSlides, 4000); // Change image every 4 seconds
             }
         </script>
+        
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        </footer>
 
     </body>
 </html> 
