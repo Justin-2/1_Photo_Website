@@ -21,16 +21,15 @@ limitations under the License.
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login Page</title>
-        <link rel="stylesheet" href="/css/login.css">
-        <link rel="stylesheet" href="/img/">
-        <link rel="stylesheet" href="/css/w3.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/w3.css">
         
         
     </head>
     <body>
         
     <center>
-        <img src="/img/the%20ultimate%20face%20swap.png">
+        <img src="img/the%20ultimate%20face%20swap.png">
         
         <center style="font-size: 60px">Login into your account here!</center>
         
@@ -44,7 +43,7 @@ limitations under the License.
                 <div class="imgcontainer">
                     <center>
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <img src="/img/derp.jpg" alt="Avatar" class="avatar">
+                        <img src="img/derp.jpg" alt="Avatar" class="avatar">
                     </center>
                 </div>
 
@@ -81,7 +80,7 @@ limitations under the License.
 		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
 
-		<!-- TODO: Add SDKs for Firebase products that you want to use
+		<!-- Add SDKs for Firebase products that you want to use
 			 https://firebase.google.com/docs/web/setup#available-libraries -->
 		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
 
@@ -104,9 +103,6 @@ limitations under the License.
 		  // make auth and firestore references (note: copied from Net Ninja Tutorial)
 		  const auth = firebase.auth();
 		  const db = firebase.firestore();
-		  
-		  // update firestore settings (note: copied from Net Ninja Tutorial)
-		  db.settings({ timestampsInSnapshots: true })
 		</script>
             
         <script>
