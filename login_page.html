@@ -1,58 +1,44 @@
 <!DOCTYPE html>
-
-<!--
-Copyright (c) 2016 Google Inc.
-Copyright (c) 2020 Justin H+Z
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
 <html>
-	<head>
+    <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login Page</title>
-        <link rel="stylesheet" href="css/login.css">
-        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/img/">
+        <link rel="stylesheet" href="/css/w3.css">
+        
     </head>
     <body>
         
     <center>
-        <img src="img/the%20ultimate%20face%20swap.png">
+        
+        
+        
+        <img src="/img/the%20ultimate%20face%20swap.png">
         
         <center style="font-size: 60px">Login into your account here!</center>
         
         <center>
         
-        <button onclick="document.getElementById('login-modal').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Login</button>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Login</button>
+            <center style="font-size: 42px">Don't have an account?</center>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Create an Account</button>
 
-        <div id="login-modal" class="modal">
+        <div id="id01" class="modal">   
 
-            <form class="modal-content animate" method="post" id="login-form">
+            <form class="modal-content animate" action="/action_page.php" method="post">
                 <div class="imgcontainer">
                     <center>
-                        <span onclick="document.getElementById('login-modal').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <img src="img/derp.jpg" alt="Avatar" class="avatar">
-                    </center>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="/img/derp.jpg" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="container">
-<!--                    <label for="uname"><b>Username</b></label>-->
-<!--                    <input type="text" placeholder="Enter Username" name="uname" required>-->
-                    <label for="e-mail"><b>Email</b></label>
-                    <input type="email" placeholder="Enter Email" name="e-mail" id="login-email" required>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="login-password" required>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
 
                     <button type="submit">Login</button>
                     <label>
@@ -62,99 +48,93 @@ limitations under the License.
 
                 <div class="container" style="background-color:#f1f1f1">
                     <center>
-                        <button type="button" onclick="document.getElementById('login-modal').style.display='none'" class="cancelbtn">Cancel</button>
-                        <span class="psw"><a href="https://piv.pivpiv.dk/">Forgot password?</a></span>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"><a href="https://piv.pivpiv.dk/">Forgot password?</a></span>
                     </center>
                 </div>
             </form>
         </div>
-        
-        <button onclick="document.getElementById('signup-modal').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Sign Up</button>
-        
-        <div id="signup-modal" class="modal">
+            
+            <div id="id02" class="modal">   
 
-            <form class="modal-content animate" method="post" id="signup-form">
-                <div class="imgcontainer">
-                    <center>
-                        <span onclick="document.getElementById('login-modal').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <img src="img/derp.jpg" alt="Avatar" class="avatar">
-                    </center>
-                </div>
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <center>
+                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="/img/derp.jpg" alt="Avatar" class="avatar">
+                            </div>
 
-                <div class="container">
-<!--                    <label for="uname"><b>Username</b></label>-->
-<!--                    <input type="text" placeholder="Enter Username" name="uname" required>-->
-                    <label for="e-mail"><b>Email</b></label>
-                    <input type="email" placeholder="Enter Email" name="e-mail" id="signup-email" required>
+                        <div class="container">
+                            <label for="uname"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="uname" required>
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="signup-password" required>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                            <label for="psw"><b>Enter Your Password Again</b></label>
+                            <input type="password" placeholder="Enter Password Again" name="psw" required>
 
-                    <button type="submit">Sign Up</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                </div>
+                            <label for="psw"><b>Your First Name</b></label>
+                            <input type="First Name" placeholder="Your First Name" name="fname" required>
 
-                <div class="container" style="background-color:#f1f1f1">
-                    <center>
-                        <button type="button" onclick="document.getElementById('signup-modal').style.display='none'" class="cancelbtn">Cancel</button>
-                    </center>
-                </div>
-            </form>
-        </div>
+                            <label for="psw"><b>Your Last Name</b></label>
+                            <input type="Last Name" placeholder="Your Last Name" name="lname" required>
+
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="submit">Confirm</button>
+                        </div>
+                        </form>
+                    </div>
 
         </center>
-        
-        <div> 
-        	<button id="logout">Sign Out</button>
-        </div>
-        
-        
-        
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
-
-		<!-- Add SDKs for Firebase products that you want to use
-			 https://firebase.google.com/docs/web/setup#available-libraries -->
-		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
-
-		<script>
-		  // Your web app's Firebase configuration
-		  var firebaseConfig = {
-			apiKey: "AIzaSyDGyQdy-CT43NjY_ethrt1i1jXJ2BBxOt4",
-			authDomain: "photosharingsite-cbcad.firebaseapp.com",
-			databaseURL: "https://photosharingsite-cbcad.firebaseio.com",
-			projectId: "photosharingsite-cbcad",
-			storageBucket: "photosharingsite-cbcad.appspot.com",
-			messagingSenderId: "152090885656",
-			appId: "1:152090885656:web:603da499c64da26eff0d6d",
-			measurementId: "G-7SPBSQPCMF"
-		  };
-		  // Initialize Firebase
-		  firebase.initializeApp(firebaseConfig);
-		  firebase.analytics();
-		  
-		  // make auth and firestore references (note: copied from Net Ninja Tutorial)
-		  const auth = firebase.auth();
-		  const db = firebase.firestore();
-		</script>
             
-        <script>
-            // Get the modal
-            var modal = document.getElementById('login-modal');
+            <div> 
+                <button id="logout">Sign Out</button>
+            </div>
+            
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+            <!-- Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+
+            <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                    apiKey: "AIzaSyDGyQdy-CT43NjY_ethrt1i1jXJ2BBxOt4",
+                    authDomain: "photosharingsite-cbcad.firebaseapp.com",
+                    databaseURL: "https://photosharingsite-cbcad.firebaseio.com",
+                    projectId: "photosharingsite-cbcad",
+                    storageBucket: "photosharingsite-cbcad.appspot.com",
+                    messagingSenderId: "152090885656",
+                    appId: "1:152090885656:web:603da499c64da26eff0d6d",
+                    measurementId: "G-7SPBSQPCMF"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+
+                // make auth and firestore references (note: copied from Net Ninja Tutorial)
+                const auth = firebase.auth();
+                const db = firebase.firestore();
+            </script>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById('login-modal');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
                 }
-            }
-        </script>
-        
-        <script src="scripts/authentication.js"></script>
+            </script>
 
     </body>
 </html>
