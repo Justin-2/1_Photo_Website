@@ -4,6 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login Page</title>
         <link rel="stylesheet" href="css/login.css">
+<<<<<<< HEAD
+=======
+        <link rel="stylesheet" href="img/">
+>>>>>>> 6baa96048849bb9dd6f362161836fc259f714b3d
         <link rel="stylesheet" href="css/w3.css">
         
     </head>
@@ -28,7 +32,11 @@
             <form class="modal-content animate" method="post" id="login-form">
                 <div class="imgcontainer">
                     <center>
+<<<<<<< HEAD
                     <span onclick="document.getElementById('modal-login').style.display='none'" class="close" title="Close Modal">&times;</span>
+=======
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+>>>>>>> 6baa96048849bb9dd6f362161836fc259f714b3d
                     <img src="img/derp.jpg" alt="Avatar" class="avatar">
                 </div>
 
@@ -59,7 +67,11 @@
                 <form class="modal-content animate" method="post" id="signup-form">
                     <div class="imgcontainer">
                         <center>
+<<<<<<< HEAD
                             <span onclick="document.getElementById('modal-signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+=======
+                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+>>>>>>> 6baa96048849bb9dd6f362161836fc259f714b3d
                             <img src="img/derp.jpg" alt="Avatar" class="avatar">
                             </div>
 
@@ -122,6 +134,8 @@
                 const auth = firebase.auth();
                 const db = firebase.firestore();
             </script>
+            
+            <script src="scripts/authentication.js"></script>
 
             <script>
                 // Get the modal
