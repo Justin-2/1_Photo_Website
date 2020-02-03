@@ -5,6 +5,8 @@
 auth.onAuthStateChanged(user => {
   if (user) {
     console.log('user logged in: ', user);
+    
+    window.location.replace("blah(actual).html");
   } else {
     console.log('user logged out');
   }
@@ -23,7 +25,7 @@ signupForm.addEventListener('submit', (e) => {
   // sign up the user
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     // close the signup modal & reset form
-    const modal = document.querySelector('#modal-signup');
+    document.getElementById('modal-signup').style.display='none'
     signupForm.reset();
   });
 });
