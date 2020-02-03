@@ -5,6 +5,8 @@
 auth.onAuthStateChanged(user => {
   if (user) {
     console.log('user logged in: ', user);
+    
+    window.location.replace("blah(actual).html");
   } else {
     console.log('user logged out');
   }
@@ -24,7 +26,6 @@ signupForm.addEventListener('submit', (e) => {
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     // close the signup modal & reset form
     const modal = document.querySelector('#modal-signup');
-    M.Modal.getInstance(modal).close();
     signupForm.reset();
   });
 });
@@ -49,8 +50,9 @@ loginForm.addEventListener('submit', (e) => {
 
   // log the user in
   auth.signInWithEmailAndPassword(email, password).then((cred) => {
-    // close the signup modal & reset form
-    
+    // close the login modal & reset form
+    document.getElementById('modal-login').style.display='none'
+    loginForm.reset();
   });
 
 });
