@@ -3,9 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login Page</title>
-        <link rel="stylesheet" href="/css/login.css">
-        <link rel="stylesheet" href="/img/">
-        <link rel="stylesheet" href="/css/w3.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/w3.css">
         
     </head>
     <body>
@@ -14,31 +13,31 @@
         
         
         
-        <img src="/img/the%20ultimate%20face%20swap.png">
+        <img src="img/the%20ultimate%20face%20swap.png">
         
         <center style="font-size: 60px">Login into your account here!</center>
         
         <center>
         
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Login</button>
+            <button onclick="document.getElementById('modal-login').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Login</button>
             <center style="font-size: 42px">Don't have an account?</center>
-            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Create an Account</button>
+            <button onclick="document.getElementById('modal-signup').style.display='block'" style="width:auto; font-size: 60px; padding-bottom: 5px">Create an Account</button>
 
-        <div id="id01" class="modal">   
+        <div id="modal-login" class="modal">   
 
-            <form class="modal-content animate" action="/action_page.php" method="post">
+            <form class="modal-content animate" method="post" id="login-form">
                 <div class="imgcontainer">
                     <center>
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="/img/derp.jpg" alt="Avatar" class="avatar">
+                    <span onclick="document.getElementById('modal-login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="img/derp.jpg" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="container">
                     <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <input type="text" placeholder="Enter Email" name="email" id="login-email" required>
 
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input type="password" placeholder="Enter Password" name="psw" id="login-password" required>
 
                     <button type="submit">Login</button>
                     <label>
@@ -48,31 +47,32 @@
 
                 <div class="container" style="background-color:#f1f1f1">
                     <center>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById('modal-login').style.display='none'" class="cancelbtn">Cancel</button>
                     <span class="psw"><a href="https://piv.pivpiv.dk/">Forgot password?</a></span>
                     </center>
                 </div>
             </form>
         </div>
             
-            <div id="id02" class="modal">   
+            <div id="modal-signup" class="modal">   
 
-                <form class="modal-content animate" action="/action_page.php" method="post">
+                <form class="modal-content animate" method="post" id="signup-form">
                     <div class="imgcontainer">
                         <center>
-                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <img src="/img/derp.jpg" alt="Avatar" class="avatar">
+                            <span onclick="document.getElementById('modal-signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="img/derp.jpg" alt="Avatar" class="avatar">
                             </div>
 
                         <div class="container">
                             <label for="email"><b>Email</b></label>
-                            <input type="text" placeholder="Enter Email" name="email" required>
+                            <input type="text" placeholder="Enter Email" name="email" id="signup-email" required>
 
                             <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            <input type="password" placeholder="Enter Password" name="psw" id="signup-password" required>
                             
                             <label for="psw"><b>Enter Your Password Again</b></label>
                             <input type="password" placeholder="Enter Password Again" name="psw" required>
+                            <!-- TODO check password equality -->
 
                             <label for="psw"><b>Your First Name</b></label>
                             <input type="First Name" placeholder="Your First Name" name="fname" required>
@@ -99,8 +99,7 @@
             <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
             <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
 
-            <!-- Add SDKs for Firebase products that you want to use
-https://firebase.google.com/docs/web/setup#available-libraries -->
+            <!-- Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
             <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
 
             <script>
@@ -123,6 +122,8 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
                 const auth = firebase.auth();
                 const db = firebase.firestore();
             </script>
+            
+            <script src="scripts/authentication.js"></script>
 
             <script>
                 // Get the modal
