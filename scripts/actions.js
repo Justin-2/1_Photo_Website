@@ -17,3 +17,9 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
+
+
+function updateImage(postNum, imgLink) {
+    posts = document.getElementsByClassName("postImg");
+    posts[postNum].src = imgLink;
+}
