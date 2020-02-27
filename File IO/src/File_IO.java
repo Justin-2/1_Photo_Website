@@ -1,34 +1,39 @@
 import java.io.*;
 import java.util.*;
 
-class B {
+class File_IO {
 
+	private static File f;
+	private static ArrayList<String> lines;
+	private static Map<Integer, Integer> linesSent;
+	
     public static void main(String[] args) throws FileNotFoundException {
-        Map<String,Integer> map = new HashMap<String,Integer>();
+    	loadFile("C:/Users/popob/Desktop/image.txt.txt");
+    
         for(int i = 0; i < 1000; ++i)
         {
-            String s = choose(new File("C:/Users/popob/Desktop/image.txt.txt"));
-            if(!map.containsKey(s))
-                map.put(s, 0);
-            map.put(s, map.get(s) + 1);
+            System.out.println(chooseLine());
         }
-
-        System.out.println(map);
     }
 
-    public static String choose(File f) throws FileNotFoundException
-    {
-        String result = null;
+    public static String chooseLine() {
         Random rand = new Random();
-        int n = 0;
-        for(Scanner sc = new Scanner(f); sc.hasNext(); )
+        int lineNumber;
+		do {
+			lineNumber = rand.nextInt(lines.size());
+		} while (map.get(lineNumber) <= 0);
+		map.put(lineNumber, map.get(lineNumber) + 1);
+        return lines.get(lineNumber);
+    }
+    
+    public static void loadFile(String addr) throws FileNotFoundException {
+    	f = new File(addr);
+    	lines = new ArrayList<String>();
+    	map = new HashMap<String, Integer>();
+    	
+    	for(Scanner sc = new Scanner(f); sc.hasNext(); )
         {
-            ++n;
-            String line = sc.nextLine();
-            if(rand.nextInt(n) == 0)
-                result = line;
+            lines.add(sc.nextLine());
         }
-
-        return result;
     }
 }
