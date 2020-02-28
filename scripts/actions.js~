@@ -25,7 +25,7 @@ function updateImage(postNum, imgLink) {
 }
 
 function loadNewImages() {
-	$.getJSON("/media", parameters, function(data, textStatus, jqXHR) {
+	$.getJSON("/search", parameters, function(data, textStatus, jqXHR) {
 
         // Call typeahead's callback with search results (i.e., places)
         asyncResults(data);
